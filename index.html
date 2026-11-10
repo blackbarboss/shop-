@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин</title>
+
+    <style>
+        body {
+            background-color: #eeeeee;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .carousel {
+            width: 350px;
+            margin: 40px auto;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .slider {
+            display: flex;
+            transition: 0.5s;
+        }
+
+        .card {
+            min-width: 350px;
+        }
+
+        .card img {
+            width: 300px;
+            height: 280px;
+            object-fit: contain;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Мой интеернет-магазин</h1>
+
+    <!-- Здесь находятся все товары -->
+    <div class="carousel">
+
+        <div class="slider" id="slider">
+
+            <!-- первый товар -->
+            <div class="card">
+                <img src="https://ir.ozone.ru/s3/multimedia-1-g/wc500/7366349320.jpg" alt="Товар 1">
+                <h3>Товар 1</h3>
+                <p>Цена: 1500 рублей</p>
+            </div>
+
+            <!-- второй товар -->
+            <div class="card">
+                <img src="https://ir.ozone.ru/s3/multimedia-1-2/wc500/15425777414.jpg" alt="Товар 2">
+                <h3>Товар 2</h3>
+                <p>Цена: 2000 рублей</p>
+            </div>
+
+            <!-- Третий товар -->
+            <div class="card">
+                <img src="https://ir.ozone.ru/s3/multimedia-1-l/wc500/20827270713.jpg" alt="Товар 3">
+                <h3>Товар 3</h3>
+                <p>Цена: 2500 рублей</p>
+            </div>
+
+        </div>
+    </div>
+
+    <button onclick="prev()">Назад</button>
+    <button onclick="next()">Вперед</button>
+
+    <script>
+
+        // номер картинки в данный момент
+        let slide = 0;
+
+        // это кнопка вперед
+        function next() {
+            slide = slide + 1;
+
+            if (slide > 2) {
+                slide = 0;
+            }
+
+            let slider = document.getElementById("slider");
+            slider.style.transform = "translateX(-" + slide * 350 + "px)";
+        }
+
+        // это кнопка назад
+        function prev() {
+            slide = slide - 1;
+
+            if (slide < 0) {
+                slide = 2;
+            }
+
+            let slider = document.getElementById("slider");
+            slider.style.transform = "translateX(-" + slide * 350 + "px)";
+        }
+
+    </script>
+
+</body>
+</html>
