@@ -1,0 +1,42 @@
+body {
+    background-color: darkgray;
+    font-family: "Times New Roman";
+    margin: 0;
+}
+
+
+header {
+    background-color: snow;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+/*название магазина*/
+
+h1 {
+    color: black
+    margin: 0;
+}
+
+
+/*меню сайта*/
+
+nav a {
+    text-decoration: none;
+    color: black
+    margin-left:20px;
+    font-size: 16px;
+
+}
+
+
+/*когда наводим мышка на ссылку*/
+
+nav a:hover {
+    color: blue;
+}
+
