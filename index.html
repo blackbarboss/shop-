@@ -1,113 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <title>Магазин</title>
+    <title>Вашитон - Интернет-магазин</title>
 
-    <style>
-        body {
-            background-color: #eeeeee;
-            font-family: Arial;
-            text-align: center;
-        }
-
-        .carousel {
-            width: 350px;
-            margin: 40px auto;
-            overflow: hidden;
-            background-color: white;
-        }
-
-        .slider {
-            display: flex;
-            transition: 0.5s;
-        }
-
-        .card {
-            min-width: 350px;
-        }
-
-        .card img {
-            width: 300px;
-            height: 280px;
-            object-fit: contain;
-        }
-
-        button {
-            padding: 10px;
-            margin: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Мой интеернет-магазин</h1>
+    <!-- шапка -->
+    <header id="home">
 
-    <!-- Здесь находятся все товары -->
-    <div class="carousel">
+        <h1>Вашитон</h1>
 
-        <div class="slider" id="slider">
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#catalog">Каталог</a>
+            <a href="#about">О нас</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
 
-            <!-- первый товар -->
-            <div class="card">
-                <img src="https://ir.ozone.ru/s3/multimedia-1-g/wc500/7366349320.jpg" alt="Товар 1">
-                <h3>Товар 1</h3>
-                <p>Цена: 1500 рублей</p>
+    </header>
+
+
+    <!-- основа сайта -->
+    <main>
+
+        <!-- каталог -->
+        <section id="catalog">
+
+            <h2>Наши товары</h2>
+
+            <div class="products">
+
+                <!-- 1 товар -->
+                <div class="product">
+
+                    <img src="https://ir.ozone.ru/s3/multimedia-1-l/wc1000/11328229605.jpg" alt="Протеин">
+
+                    <h3>Протеин для качков</h3>
+
+                    <p>Цена: 450 РУБЛ</p>
+
+                    <button>Купить</button>
+
+                </div>
+
+
+                <!-- 2 товар -->
+                <div class="product">
+
+                    <img src="https://ir.ozone.ru/s3/multimedia-1-j/wc1000/7366349323.jpg" alt="Футболка Levis">
+
+                    <h3>Футболка Levis</h3>
+
+                    <p>Цена: 5500 РУБЛ</p>
+
+                    <button>Купить</button>
+
+                </div>
+
+
+                <!-- 3 товар -->
+                <div class="product">
+
+                    <img src="https://ir.ozone.ru/s3/multimedia-1-0/wc1000/20732250312.jpg" alt="MacBook 13 Neo">
+
+                    <h3>MacBook 13 Neo</h3>
+
+                    <p>Цена: 80000 РУБЛ</p>
+
+                    <button>Купить</button>
+
+                </div>
+
             </div>
 
-            <!-- второй товар -->
-            <div class="card">
-                <img src="https://ir.ozone.ru/s3/multimedia-1-2/wc500/15425777414.jpg" alt="Товар 2">
-                <h3>Товар 2</h3>
-                <p>Цена: 2000 рублей</p>
-            </div>
+        </section>
 
-            <!-- Третий товар -->
-            <div class="card">
-                <img src="https://ir.ozone.ru/s3/multimedia-1-l/wc500/20827270713.jpg" alt="Товар 3">
-                <h3>Товар 3</h3>
-                <p>Цена: 2500 рублей</p>
-            </div>
 
-        </div>
-    </div>
+        <!-- инфо о магазине -->
+        <section id="about">
 
-    <button onclick="prev()">Назад</button>
-    <button onclick="next()">Вперед</button>
+            <h2>О нас</h2>
 
-    <script>
+            <p>Вашитон — интернет-магазин, в котором можно найти товары по хорошим ценам.</p>
 
-        // номер картинки в данный момент
-        let slide = 0;
+        </section>
 
-        // это кнопка вперед
-        function next() {
-            slide = slide + 1;
 
-            if (slide > 2) {
-                slide = 0;
-            }
+        <!-- контакты -->
+        <section id="contacts">
 
-            let slider = document.getElementById("slider");
-            slider.style.transform = "translateX(-" + slide * 350 + "px)";
-        }
+            <h2>Контакты</h2>
 
-        // это кнопка назад
-        function prev() {
-            slide = slide - 1;
+            <p>Добро пожаловать в наш магазин!</p>
 
-            if (slide < 0) {
-                slide = 2;
-            }
+        </section>
 
-            let slider = document.getElementById("slider");
-            slider.style.transform = "translateX(-" + slide * 350 + "px)";
-        }
+    </main>
 
-    </script>
+
+    <!-- снизу сайта -->
+    <footer>
+
+        <p>Вашитон.</p>
+
+    </footer>
 
 </body>
+
 </html>
