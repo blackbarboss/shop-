@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -18,6 +19,7 @@
         <nav>
             <a href="#home">Главная</a>
             <a href="#catalog">Каталог</a>
+            <a href="#cart">Корзина (<span id="cart-count">0</span>)</a>
             <a href="#about">О нас</a>
             <a href="#contacts">Контакты</a>
         </nav>
@@ -42,9 +44,13 @@
 
                     <h3>Протеин для качков</h3>
 
-                    <p>Цена: 450 РУБЛ</p>
+                    <p>Цена: 4500р.</p>
 
-                    <button>Купить</button>
+                    <button class="add-to-cart"
+                            data-name="Протеин для качков"
+                            data-price="4500">
+                        Добавить в корзину
+                    </button>
 
                 </div>
 
@@ -56,9 +62,13 @@
 
                     <h3>Футболка Levis</h3>
 
-                    <p>Цена: 5500 РУБЛ</p>
+                    <p>Цена: 5500р.</p>
 
-                    <button>Купить</button>
+                    <button class="add-to-cart"
+                            data-name="Футболка Levis"
+                            data-price="5500">
+                        Добавить в корзину
+                    </button>
 
                 </div>
 
@@ -70,13 +80,91 @@
 
                     <h3>MacBook 13 Neo</h3>
 
-                    <p>Цена: 80000 РУБЛ</p>
+                    <p>Цена: 80000р.</p>
 
-                    <button>Купить</button>
+                    <button class="add-to-cart"
+                            data-name="MacBook 13 Neo"
+                            data-price="80000">
+                        Добавить в корзину
+                    </button>
+
+                </div>
+
+
+                <!-- 4 товар -->
+                <div class="product">
+
+                    <img src="https://ir.ozone.ru/s3/multimedia-1-1/wc1000/8817759397.jpg" alt="Магний цитрат">
+
+                    <h3>Магний цитрат GLS Pharmaceuticals</h3>
+
+                    <p>180 капсул</p>
+
+                    <p>Цена: 1200р.</p>
+
+                    <button class="add-to-cart"
+                            data-name="Магний цитрат GLS Pharmaceuticals"
+                            data-price="1200">
+                        Добавить в корзину
+                    </button>
+
+                </div>
+
+
+                <!-- 5 товар -->
+                <div class="product">
+
+                    <img src="https://ir.ozone.ru/s3/multimedia-1-k/wc1000/21261114776.jpg" alt="Магний B6">
+
+                    <h3>Магний + B6 Макс Health'is</h3>
+
+                    <p>120 капсул</p>
+
+                    <p>Цена: 1350р.</p>
+
+                    <button class="add-to-cart"
+                            data-name="Магний + B6 Макс Health'is"
+                            data-price="1350">
+                        Добавить в корзину
+                    </button>
+
+                </div>
+
+
+                <!-- 6 товар -->
+                <div class="product">
+
+                    <img src="https://ir.ozone.ru/s3/multimedia-1-c/wc1000/13695978216.jpg" alt="Омега 3">
+
+                    <h3>Омега-3 VitaMeal</h3>
+
+                    <p>90 капсул</p>
+
+                    <p>Цена: 1080р.</p>
+
+                    <button class="add-to-cart"
+                            data-name="Омега-3 VitaMeal"
+                            data-price="1080">
+                        Добавить в корзину
+                    </button>
 
                 </div>
 
             </div>
+
+        </section>
+
+
+        <!-- корзина -->
+        <section id="cart">
+
+            <h2>Моя корзина</h2>
+
+            <ul id="cart-items">
+
+            </ul>
+
+            <h3 id="cart-total">Итого: 0р.</h3>
 
         </section>
 
@@ -96,19 +184,28 @@
 
             <h2>Контакты</h2>
 
-            <p>Добро пожаловать в наш магазин!</p>
+            <p>Телефон: <a href="tel:+79777778877">+7 977 777 88 77</a></p>
+
+            <p>Почта:
+                <a href="mailto:vasyapupkin1337@gmail.com">
+                    vasyapupkin1337@gmail.com
+                </a>
+            </p>
 
         </section>
 
     </main>
 
 
-    <!-- снизу сайта -->
+    <!-- подвал -->
     <footer>
 
         <p>Вашитон.</p>
 
     </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 
