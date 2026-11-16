@@ -1,9 +1,14 @@
+
+/* основные настройки */
+
 body {
     background-color: darkgray;
-    font-family: "Times New Roman";
+    font-family: Arial;
     margin: 0;
 }
 
+
+/* шапка */
 
 header {
     background-color: snow;
@@ -11,32 +16,137 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 
-/*название магазина*/
+/* название магазина */
 
 h1 {
-    color: black
+    color: black;
     margin: 0;
 }
 
 
-/*меню сайта*/
+/* меню сайта */
 
 nav a {
     text-decoration: none;
-    color: black
-    margin-left:20px;
+    color: black;
+    margin-left: 20px;
     font-size: 16px;
-
 }
 
 
-/*когда наводим мышка на ссылку*/
+/* когда наводим мышку на ссылку */
 
 nav a:hover {
     color: blue;
 }
 
+
+/* основная часть */
+
+main {
+    padding: 20px;
+}
+
+
+/* заголовок каталога */
+
+h2 {
+    text-align: center;
+}
+
+
+/* товары */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+
+/* карточка товара */
+
+.product {
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+
+/* фотография товара */
+
+.product img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+
+
+/* название товара */
+
+.product h3 {
+    font-size: 17px;
+}
+
+
+/* цена товара */
+
+.product p {
+    font-size: 15px;
+}
+
+
+/* кнопка покупки */
+
+.product button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/* подвал сайта */
+
+footer {
+    background-color: snow;
+    padding: 15px;
+    text-align: center;
+}
+
+
+/* корзина */
+
+#cart {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+
+/* товары в корзине */
+
+#cart-items li {
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+
+/* кнопки товаров */
+
+.product button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.product button:hover {
+    background-color: darkblue;
+}
